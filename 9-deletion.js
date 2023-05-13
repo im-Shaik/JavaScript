@@ -93,13 +93,6 @@ function deleteItemLocalStorage(taskElament) {
 }
 
 function deleteItem(e) {
-  let tasks;
-  if (localStorage.getItem("tasks") === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
-  }
-
   if (e.target.parentElement.classList.contains("delete-item")) {
     let msg = confirm("Are you sure?");
     if (msg === true) {
